@@ -61,7 +61,7 @@ df_full, X, y = load_data()
 st.sidebar.title("🤖 模型控制中心")
 selected_name = st.sidebar.selectbox(
     "請選擇分類模型：",
-    ["KNN", "LogisticRegression", "RandomForest", "XGBoost"]
+    ["KNN", "LogisticRegression", "XGBoost"]
 )
 model = load_model(selected_name)
 
@@ -126,3 +126,4 @@ if st.session_state.sample_idx is not None:
     else:
 
         st.error("❌ 預測失誤。這反映了模型在邊際樣本上的侷限性。")
+
